@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javier Lianes – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0f172a;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --radius-xl: 18px;
+      --radius-2xl: 26px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.8);
+      --transition: 0.2s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 8px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.92),
+        rgba(2, 6, 23, 0.6),
+        transparent
+      );
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav a {
+      margin-left: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width var(--transition);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.3fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 9px 18px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: #0b1120;
+      font-weight: 600;
+      box-shadow: 0 16px 40px rgba(22, 163, 74, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 50px rgba(22, 163, 74, 0.55);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--muted);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent);
+      color: #e5e7eb;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-2xl);
+      background: radial-gradient(circle at top left, #0f172a, #020617 55%);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 20px 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .hero-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.2);
+    }
+
+    .hero-card-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--muted);
+    }
+
+    .hero-timeline {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-stack {
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-stack span {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .hero-highlight {
+      font-size: 0.85rem;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      padding: 8px 10px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      margin-bottom: 8px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-pill {
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 4px 8px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    /* SECTION GENERAL */
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .about {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .about-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .about-highlight-box {
+      border-radius: var(--radius-xl);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .about-highlight-box strong {
+      color: #e5e7eb;
+    }
+
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .stack-tag {
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 0.78rem;
+      background: rgba(30, 64, 175, 0.6);
+      color: #dbeafe;
+    }
+
+    /* PROJECTS */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .filter-btn {
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--muted);
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      color: #0b1120;
+      border-color: transparent;
+      transform: translateY(-1px);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      border-radius: var(--radius-xl);
+      background: var(--card);
+      padding: 14px 14px 16px;
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.95);
+      border-color: var(--accent);
+    }
+
+    .project-type {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .project-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .project-tag {
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .project-footer {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .link-pill {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .link-pill:hover {
+      background: rgba(15, 23, 42, 1);
+      color: #e5e7eb;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* PLAYGROUND */
+
+    .playground-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 800px) {
+      .playground-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .playground-card {
+      border-radius: var(--radius-xl);
+      background: var(--bg-alt);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 14px 14px 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .playground-code {
+      border-radius: 14px;
+      background: #020617;
+      padding: 10px 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      border-radius: var(--radius-xl);
+      background: var(--bg-alt);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 16px 16px 20px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .contact-label {
+      font-weight: 500;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-pill {
+      border-radius: 999px;
+      padding: 6px 12px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .contact-pill:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent);
+      color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">JL · PORTFOLIO</div>
+      <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#playground">Playground</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          Hola, soy <span>Javier</span><br />
+          construyo apps Android, webs y herramientas en Python.
+        </h1>
+        <p class="hero-subtitle">
+          Me gusta construir cosas útiles y que se puedan ver en producción:
+          apps publicadas en Play Store, dashboards de automatización
+          y pequeños experimentos que hacen la vida más cómoda.
+        </p>
+
+        <div class="hero-tags">
+          <div class="chip">Android · Kotlin / Java</div>
+          <div class="chip">Python · Automatización</div>
+          <div class="chip">Web · HTML / CSS / JS</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects"><button class="btn btn-primary">Ver proyectos</button></a>
+          <a href="#contact"><button class="btn btn-ghost">Contactar</button></a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span class="hero-card-title">último proyecto destacado</span>
+          <span class="hero-dot"></span>
+        </div>
+        <div class="hero-timeline">2025 · Android · Producción</div>
+        <div class="hero-stack">
+          Stack principal: <span>Android, Kotlin, REST APIs, Firebase</span>
+        </div>
+        <div class="hero-highlight">
+          App publicada en Play Store para gestionar <strong>notificaciones inteligentes</strong> de cumpleaños,
+          con sincronización en la nube y arquitectura limpia.
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-pill">Arquitectura limpia</div>
+          <div class="hero-meta-pill">Notificaciones diarias</div>
+          <div class="hero-meta-pill">Google / Firebase</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-subtitle">
+        Un poco de contexto para entender qué tipo de proyectos hago.
+      </p>
+
+      <div class="about">
+        <div class="about-text">
+          <p>
+            Soy desarrollador con experiencia en <strong>Android</strong>, <strong>Python</strong> y desarrollo web.
+            Me gusta centrarme en proyectos que resuelven problemas reales: automatizar tareas repetitivas,
+            controlar dispositivos, dashboards para datos… y que además se puedan enseñar fácilmente.
+          </p>
+          <br />
+          <p>
+            En este portfolio encontrarás una mezcla de aplicaciones de producción
+            (publicadas en Play Store o usadas en entornos reales) y pequeños proyectos experimentales.
+          </p>
+        </div>
+        <div class="about-highlight-box">
+          <strong>Tech stack principal</strong>
+          <div class="stack-tags">
+            <span class="stack-tag">Kotlin / Java · Android</span>
+            <span class="stack-tag">Python (scripts y APIs)</span>
+            <span class="stack-tag">Tkinter / GUIs</span>
+            <span class="stack-tag">HTML · CSS · JS</span>
+            <span class="stack-tag">REST APIs · JSON</span>
+            <span class="stack-tag">SQLite / Firebase</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-subtitle">
+        Filtra por tipo para ver Android, Python o proyectos web.
+      </p>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="android">Android</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROYECTO ANDROID -->
+        <article class="project-card" data-category="android">
+          <div class="project-type">Android · Play Store</div>
+          <h3 class="project-title">Birthday Notifier</h3>
+          <p class="project-desc">
+            App de Android para gestionar cumpleaños, enviar recordatorios diarios y
+            sincronizar un JSON de cumpleaños con la nube (Firebase Storage), usando
+            login con Google y Clean Architecture.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Kotlin</span>
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">Clean Architecture</span>
+          </div>
+          <div class="project-footer">
+            <a class="link-pill" href="#" target="_blank">Ver en Play Store ↗</a>
+            <a class="link-pill" href="#" target="_blank">Código fuente</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO PYTHON -->
+        <article class="project-card" data-category="python">
+          <div class="project-type">Python · Desktop</div>
+          <h3 class="project-title">Dashboard local / Home automation</h3>
+          <p class="project-desc">
+            Aplicación en Python con arquitectura limpia para monitorizar servicios
+            en la red local (Home Assistant, NAS, Mini PC), incluyendo scripts
+            de Wake-on-LAN y ejecución remota de procesos.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Tkinter</span>
+            <span class="project-tag">Clean Architecture</span>
+          </div>
+          <div class="project-footer">
+            <a class="link-pill" href="#" target="_blank">Ver en GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO WEB -->
+        <article class="project-card" data-category="web">
+          <div class="project-type">Web · Portfolio</div>
+          <h3 class="project-title">Monitor de proyectos GitLab</h3>
+          <p class="project-desc">
+            Web que muestra el estado de pipelines de múltiples proyectos GitLab,
+            con integración de SonarQube, estado de calidad de código y enlaces
+            directos a pipelines y análisis.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">Python backend</span>
+          </div>
+          <div class="project-footer">
+            <a class="link-pill" href="#" target="_blank">Demo / Capturas</a>
+            <a class="link-pill" href="#" target="_blank">Código fuente</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO PYTHON / TKINTER -->
+        <article class="project-card" data-category="python">
+          <div class="project-type">Python · GUI</div>
+          <h3 class="project-title">Hobby Picker</h3>
+          <p class="project-desc">
+            Pequeña app de escritorio que sugiere actividades aleatorias según
+            preferencias guardadas en SQLite, con interfaz en Tkinter y patrón DAO.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">SQLite</span>
+            <span class="project-tag">Tkinter</span>
+          </div>
+          <div class="project-footer">
+            <a class="link-pill" href="#" target="_blank">Ver en GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO WEB / JUEGO -->
+        <article class="project-card" data-category="web">
+          <div class="project-type">Juego · En progreso</div>
+          <h3 class="project-title">Jayden Between Worlds</h3>
+          <p class="project-desc">
+            Juego narrativo inspirado en Pokémon, con mecánicas de combate por
+            turnos, varios mundos y guardado en la nube. En desarrollo a largo plazo.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">C#</span>
+            <span class="project-tag">Game Dev</span>
+          </div>
+          <div class="project-footer">
+            <a class="link-pill" href="#" target="_blank">Roadmap / Diseño ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLAYGROUND -->
+    <section id="playground">
+      <h2 class="section-title">Playground · ejemplos interactivos</h2>
+      <p class="section-subtitle">
+        Aquí iría lo “interactivo”: demos embebidas, pequeños ejemplos de código, etc.
+      </p>
+
+      <div class="playground-grid">
+        <div class="playground-card">
+          <h3 style="margin-bottom: 6px;">Mini demo (idea)</h3>
+          <p style="margin-bottom: 10px;">
+            Aquí puedes incrustar:
+          </p>
+          <ul style="margin-left: 18px; margin-bottom: 10px;">
+            <li>Un iframe con una demo web.</li>
+            <li>Un GIF mostrando una app Android.</li>
+            <li>Un enlace a un Notebook interactivo.</li>
+          </ul>
+          <p>
+            Por ejemplo, un canvas con una pequeña animación, o un botón que llama
+            a una API en tu backend para mostrar algo dinámico.
+          </p>
+        </div>
+
+        <div class="playground-card">
+          <h3 style="margin-bottom: 6px;">Snippet de código</h3>
+          <p style="margin-bottom: 8px;">
+            Pequeño fragmento de código destacando buena arquitectura:
+          </p>
+          <pre class="playground-code"><code># Python · ejemplo de servicio limpio
+
+class BirthdayNotifierService:
+    def __init__(self, repository, whatsapp_client):
+        self.repository = repository
+        self.whatsapp_client = whatsapp_client
+
+    def send_today_notifications(self):
+        birthdays = self.repository.get_birthdays_for_today()
+        for b in birthdays:
+            msg = f"¡Feliz cumpleaños, {b.name}! 🥳"
+            self.whatsapp_client.send_message(b.phone, msg)</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-subtitle">
+        ¿Quieres ver más en detalle algún proyecto o colaborar en algo?
+      </p>
+
+      <div class="contact-box">
+        <span class="contact-label">Hablemos:</span>
+        <div class="contact-links">
+          <a class="contact-pill" href="mailto:tuemail@example.com">✉️ tuemail@example.com</a>
+          <a class="contact-pill" href="#" target="_blank">💼 LinkedIn</a>
+          <a class="contact-pill" href="#" target="_blank">🐙 GitHub</a>
+          <a class="contact-pill" href="#" target="_blank">📱 Play Store</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Javier Lianes · Portfolio
+    </footer>
+  </div>
+
+  <script>
+    // Año automático en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Filtro de proyectos
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        projectCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
