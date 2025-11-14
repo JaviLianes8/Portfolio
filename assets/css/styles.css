@@ -120,6 +120,49 @@ nav a:hover::after {
   gap: 12px;
 }
 
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.about-photo {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(56, 189, 248, 0.24);
+}
+
+.about-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(56, 189, 248, 0.1), transparent 65%);
+  pointer-events: none;
+}
+
+.about-photo img {
+  width: 100%;
+  display: block;
+}
+
+.about-content p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-photo {
+    max-width: 320px;
+  }
+}
+
 .link-pill {
   display: inline-flex;
   align-items: center;
@@ -246,6 +289,88 @@ nav a:hover::after {
 
 .hidden {
   display: none !important;
+}
+
+.android {
+  margin-top: 80px;
+}
+
+.android-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.android-case {
+  background: rgba(15, 23, 42, 0.72);
+  border-radius: var(--radius-2xl);
+  padding: 30px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.android-case header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.android-case h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.android-body {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+}
+
+.android-body img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(56, 189, 248, 0.24);
+}
+
+.android-case ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.android-case ul li::before {
+  content: "•";
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+.android-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+@media (max-width: 880px) {
+  .android-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .split-layout {
