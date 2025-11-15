@@ -42,7 +42,7 @@ Cada push a `main` puede desplegarse automáticamente en Vercel gracias al workf
 2. En GitHub, ir a *Settings → Secrets and variables → Actions* y registrar tres secretos: `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` y `VERCEL_TOKEN`.
 3. Confirmar que la rama por defecto es `main`. Cada nuevo push a `main` (o una ejecución manual del workflow) publicará la última versión estática usando el CLI oficial de Vercel.
 
-No es necesario definir comandos de build porque el sitio es 100 % estático; el workflow simplemente sube `index.html` y la carpeta `assets/` tal como están.
+El archivo `vercel.json` incluido en la raíz fuerza a Vercel a tratar `index.html`, `assets/` y `public/` como artefactos estáticos y mapea explícitamente las rutas usadas por los iconos. No hay pasos de build, así que el workflow simplemente empaqueta los archivos tal cual.
 
 ## Licencia
 
