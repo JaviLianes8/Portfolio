@@ -80,6 +80,7 @@
 
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="web">Web</button>
           <button class="filter-btn" data-filter="python">Python</button>
           <button class="filter-btn" data-filter="android">Android</button>
         </div>
@@ -133,6 +134,54 @@
             </div>
           </article>
 
+          <article class="project-card" data-category="web">
+            <div class="project-type">Web · Firebase · Azure</div>
+            <h3 class="project-title">Real Tajo CF · Plataforma de datos</h3>
+            <p class="project-desc">
+              Ecosistema web para publicar resultados, clasificaciones y calendario
+              del Real Tajo CF. El frontend en Firebase consume un backend FastAPI
+              desplegado en Azure que acepta cargas JSON estructuradas para cada
+              torneo y sincroniza PDF convertidos.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Firebase Hosting</span>
+              <span class="project-tag">Azure</span>
+            </div>
+            <div class="project-links">
+              <a class="link-pill" href="https://real-tajo-cf.web.app/" target="_blank" rel="noreferrer">🌐 Sitio en vivo</a>
+              <a class="link-pill" href="https://github.com/AlejandroSenior/realtajocf" target="_blank" rel="noreferrer">🐙 Frontend</a>
+              <a class="link-pill" href="https://github.com/JaviLianes8/RealTajoFCBack" target="_blank" rel="noreferrer">🐙 Backend</a>
+            </div>
+            <div class="project-footer">
+              <span class="link-pill">ETL JSON ↔️ PDF automatizada</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <div class="project-type">Web · Panel en tiempo real</div>
+            <h3 class="project-title">Lianes Minecraft Control Panel</h3>
+            <p class="project-desc">
+              Dashboard estático que gobierna mi servidor de Minecraft. Combina SSE
+              y polling para mostrar estado, jugadores y logs en directo, con
+              contraseñas saladas generadas en build y fallback vía formularios
+              ocultos ante restricciones CORS.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">SSE</span>
+              <span class="project-tag">Clean Architecture</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a class="link-pill" href="https://lianes-minecraft-front.vercel.app/" target="_blank" rel="noreferrer">🌐 Sitio en vivo</a>
+              <a class="link-pill" href="https://github.com/JaviLianes8/LianesMinecraftFront" target="_blank" rel="noreferrer">🐙 Frontend</a>
+              <a class="link-pill" href="https://github.com/JaviLianes8/LianesMinecraftBack" target="_blank" rel="noreferrer">🔒 Backend privado</a>
+            </div>
+            <div class="project-footer">
+              <span class="link-pill">Backend on-premise en mini PC</span>
+            </div>
+          </article>
+
           <article class="project-card" data-category="android">
             <div class="project-type">Android · Kotlin</div>
             <h3 class="project-title">Confetii – Birthday Notifier</h3>
@@ -176,6 +225,46 @@
             </div>
             <div class="project-footer">
               <span class="link-pill">5 ★ en Google Play</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <div class="project-type">Web · Geolocalización</div>
+            <h3 class="project-title">Taxi Auto</h3>
+            <p class="project-desc">
+              Calculadora de tarifas de taxi en Madrid que combina Google Maps y
+              una ruta offline vía GraphHopper. Inyecta las claves en build para
+              no exponer secretos y ofrece un flujo responsive centrado en el
+              coste estimado y la visualización del trayecto.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Google Maps</span>
+              <span class="project-tag">GraphHopper</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a class="link-pill" href="https://vercel.com/javier-lianes-garcias-projects/taxi-auto-web" target="_blank" rel="noreferrer">🌐 Sitio en vivo</a>
+            </div>
+            <div class="project-footer">
+              <span class="link-pill">Backend privado desplegado en mini PC</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <div class="project-type">Web · Monolito Serverless</div>
+            <h3 class="project-title">Organizador de mesas para boda</h3>
+            <span class="project-status status-progress">🚧 En progreso</span>
+            <p class="project-desc">
+              Herramienta monolítica para planificar mesas y aforos en eventos. El
+              despliegue en Vercel permite iterar rápido sobre la UX mientras
+              cierro la lógica de asignación automática y exportación de planos.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a class="link-pill" href="https://vercel.com/javier-lianes-garcias-projects/autorganizador-mesas-boda" target="_blank" rel="noreferrer">🌐 Vista previa</a>
             </div>
           </article>
         </div>
