@@ -681,10 +681,18 @@ nav a:hover::after {
   background: rgba(56, 189, 248, 0.08);
   border-radius: 999px;
   padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--accent);
   font-weight: 600;
   font-size: 0.9rem;
   transition: transform var(--transition);
+}
+
+.contact-pill img,
+.link-pill img {
+  display: block;
 }
 
 .contact-pill:hover {
