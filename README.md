@@ -34,6 +34,16 @@ No se requiere ningún build step: basta con un navegador moderno que soporte m�
 - **Proyectos:** edita `assets/js/data/projects.js` para actualizar tarjetas, enlaces y estados.
 - **Estilos:** `assets/css/styles.css` controla el aspecto visual de la UI.
 
+## Despliegue automático en Vercel
+
+Cada push a `main` puede desplegarse automáticamente en Vercel gracias al workflow de GitHub Actions incluido en `.github/workflows/vercel-deploy.yml`. Para activarlo debes:
+
+1. Crear un proyecto en Vercel apuntando a este repositorio y anotar los valores de **ORG_ID**, **PROJECT_ID** y un **TOKEN** con permisos de deploy (desde la sección *Settings → Tokens*).
+2. En GitHub, ir a *Settings → Secrets and variables → Actions* y registrar tres secretos: `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` y `VERCEL_TOKEN`.
+3. Confirmar que la rama por defecto es `main`. Cada nuevo push a `main` (o una ejecución manual del workflow) publicará la última versión estática usando el CLI oficial de Vercel.
+
+El archivo `vercel.json` incluido en la raíz fuerza a Vercel a tratar `index.html`, `assets/` y `public/` como artefactos estáticos y mapea explícitamente las rutas usadas por los iconos. No hay pasos de build, así que el workflow simplemente empaqueta los archivos tal cual.
+
 ## Licencia
 
 El contenido se distribuye bajo la licencia que determine el titular del repositorio.
