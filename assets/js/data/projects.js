@@ -149,7 +149,14 @@ export const PROJECTS = [
   {
     id: "real-tajo",
     category: "web",
-    tags: ["FastAPI", "Firebase Hosting", "Azure", "DataOps", "Automatización"],
+    tags: [
+      "FastAPI",
+      "Firebase Hosting",
+      "Azure",
+      "DataOps",
+      "Automatización",
+      "Backend · Python",
+    ],
     links: [
       {
         href: "https://real-tajo-cf.web.app/",
@@ -182,7 +189,14 @@ export const PROJECTS = [
   {
     id: "minecraft-panel",
     category: "web",
-    tags: ["SSE", "Clean Architecture", "Vercel", "Realtime", "Infra Privada"],
+    tags: [
+      "SSE",
+      "Clean Architecture",
+      "Vercel",
+      "Realtime",
+      "Infra Privada",
+      "Backend · Python",
+    ],
     links: [
       {
         href: "https://lianes-minecraft-front.vercel.app/",
@@ -223,6 +237,7 @@ export const PROJECTS = [
       "CI/CD",
       "Pricing Engine",
       "Optimización",
+      "Backend · Python",
     ],
     links: [
       {
