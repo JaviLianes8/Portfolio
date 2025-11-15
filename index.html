@@ -13,8 +13,6 @@
         <nav>
           <a href="#about">Sobre mí</a>
           <a href="#projects">Proyectos</a>
-          <a href="#android">Android</a>
-          <a href="#restful-checker">RESTful Checker</a>
           <a href="#contact">Contacto</a>
         </nav>
       </header>
@@ -46,18 +44,6 @@
             <span class="terminal-dot"></span>
           </div>
           <div class="terminal-body">
-            <div class="terminal-line">
-              <span>➜</span> pip install restful-checker
-            </div>
-            <div class="terminal-line">
-              Collecting restful-checker==2.0.0
-            </div>
-            <div class="terminal-line">
-              Installing collected packages: restful-checker
-            </div>
-            <div class="terminal-line">
-              Successfully installed restful-checker-2.0.0
-            </div>
           </div>
         </div>
       </section>
@@ -163,12 +149,11 @@
               <span class="project-tag">Compose</span>
             </div>
             <div class="project-links">
-              <a class="link-pill" href="https://github.com/JaviLianes8/BirthdayNotifierApp" target="_blank" rel="noreferrer">🐙 Código</a>
+              <a class="link-pill" href="https://github.com/JaviLianes8/BirthdayNotifierApp" target="_blank" rel="noreferrer">🐙 Código privado</a>
               <a class="link-pill" href="https://play.google.com/store/apps/details?id=com.jlianes.birthdaynotifier" target="_blank" rel="noreferrer">📱 Google Play</a>
             </div>
             <div class="project-footer">
-              <a class="link-pill" href="https://play.google.com/store/apps/details?id=com.jlianes.birthdaynotifier" target="_blank" rel="noreferrer">⭐ 4.57 · +Firebase Storage</a>
-              <a class="link-pill" href="#android">🧭 Ver arquitectura</a>
+              <span class="link-pill">4.57 ★ en Google Play</span>
             </div>
           </article>
 
@@ -187,145 +172,15 @@
             </div>
             <div class="project-links">
               <a class="link-pill" href="https://github.com/JaviLianes8/Finiq" target="_blank" rel="noreferrer">🐙 Código privado</a>
+              <a class="link-pill" href="https://play.google.com/store/apps/details?id=com.jlianes.finiq.app" target="_blank" rel="noreferrer">📱 Google Play</a>
             </div>
             <div class="project-footer">
-              <a class="link-pill" href="#android">🧭 Roadmap v1</a>
+              <span class="link-pill">5 ★ en Google Play</span>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="android" class="android">
-        <h2 class="section-title">Android: automatización que llega a tiempo</h2>
-        <p class="section-subtitle">
-          Apps Kotlin construidas con Clean Architecture, sincronización en la
-          nube y un enfoque obsesivo por la notificación perfecta.
-        </p>
-
-        <div class="android-grid">
-          <article class="android-case">
-            <header>
-              <h3>Confetii</h3>
-              <span class="pill">4.57 ★ en Google Play</span>
-            </header>
-            <div class="android-body">
-              <img src="assets/img/confetii-showcase.svg" alt="Resumen visual de Confetii" />
-              <div>
-                <ul>
-                  <li>Autenticación Google y almacenamiento cifrado en Firebase Storage.</li>
-                  <li>Sincronización JSON por usuario con diffs automáticos al exportar/importar.</li>
-                  <li>WorkManager diario configurable y notificaciones con snooze e intents directos a WhatsApp, Telegram, SMS o llamadas.</li>
-                  <li>Importación de contactos, eventos de calendario y soporte multilenguaje + temas.</li>
-                </ul>
-                <div class="android-links">
-                  <a class="link-pill" href="https://github.com/JaviLianes8/BirthdayNotifierApp" target="_blank" rel="noreferrer">Ver repositorio</a>
-                  <a class="link-pill" href="https://play.google.com/store/apps/details?id=com.jlianes.birthdaynotifier" target="_blank" rel="noreferrer">Abrir en Google Play</a>
-                  <a class="link-pill" href="https://firebase.google.com/" target="_blank" rel="noreferrer">Stack Firebase</a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="android-case">
-            <header>
-              <h3>Finiq</h3>
-              <span class="pill">Roadmap ★★★★★ interno</span>
-            </header>
-            <div class="android-body">
-              <img src="assets/img/finiq-showcase.svg" alt="Resumen visual de Finiq" />
-              <div>
-                <ul>
-                  <li>Arquitectura Clean dividida en domain/data/framework/presentation con casos de uso reutilizables.</li>
-                  <li>Módulo de cálculo de neto y vacaciones ya operativo; indemnización y convenios en progreso.</li>
-                  <li>Preparado para integrar informe de vida laboral y sincronización segura.</li>
-                  <li>UI clásica optimizada para formularios complejos con validaciones paso a paso.</li>
-                </ul>
-                <div class="android-links">
-                  <a class="link-pill" href="https://github.com/JaviLianes8/Finiq" target="_blank" rel="noreferrer">Ver repositorio privado</a>
-                  <a class="link-pill" href="mailto:javier@restfulchecker.dev?subject=Demo%20Finiq">Solicitar demo</a>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="restful-checker">
-        <h2 class="section-title">RESTful Checker en detalle</h2>
-        <p class="section-subtitle">
-          Basado en el análisis de múltiples APIs reales. Estos son los errores
-          más comunes que encontramos y cómo puedes evitarlos.
-        </p>
-
-        <div class="split-layout">
-          <div class="card-panel">
-            <h3>Top 10 errores al crear una API RESTful</h3>
-            <ul class="error-list">
-              <li>Usar PascalCase en las URLs (<code>/TestBedApi/...</code>).</li>
-              <li>Incluir verbos como <code>updatejar</code>, <code>install-apk</code>, <code>start-app</code> en la ruta.</li>
-              <li>No usar plural en los segmentos (<code>/report</code>, <code>/evidence</code>, <code>/download</code>).</li>
-              <li>Definir manualmente errores 500 (deben ser implícitos).</li>
-              <li>Falta de <code>examples</code> en las respuestas JSON.</li>
-              <li>No devolver código 201 tras crear recursos con POST.</li>
-              <li>No usar parámetros de filtro en los GET (<code>?status=</code>, <code>?filter=</code>).</li>
-              <li>No soportar paginación en listados (<code>?page=</code>, <code>?limit=</code>).</li>
-              <li>Múltiples IDs consecutivos en rutas (<code>/{id}/{id}</code>).</li>
-              <li>No usar HTTPS en todos los entornos.</li>
-            </ul>
-          </div>
-
-          <div class="card-panel">
-            <h3>RESTful Checker Tools</h3>
-            <ul class="resource-list">
-              <li><a href="https://pypi.org/project/restful-checker/" target="_blank" rel="noreferrer">CLI Tool: PyPI</a></li>
-              <li><a href="https://github.com/JaviLianes8/restful-checker" target="_blank" rel="noreferrer">GitHub CLI: ver repositorio</a></li>
-              <li><a href="https://restful-checker-website.vercel.app/" target="_blank" rel="noreferrer">Web checker: pruébalo aquí</a></li>
-              <li><a href="https://render.com/" target="_blank" rel="noreferrer">REST API: desplegada en Render</a></li>
-              <li><a href="https://developer.android.com/topic/architecture" target="_blank" rel="noreferrer">📚 Clean Architecture reference</a></li>
-            </ul>
-            <p class="empty-state">
-              Integración en tu CI/CD: añade el análisis como paso automático.<br />
-              Uso manual: ejecuta el CLI o abre el checker web.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="playground">
-        <h2 class="section-title">Playground · demos rápidas</h2>
-        <p class="section-subtitle">
-          Muestra cómo se usan las herramientas directamente en la terminal o en
-          un informe HTML.
-        </p>
-
-        <div class="playground-grid">
-          <div class="playground-card">
-            <h3>json-pretty-diff en acción</h3>
-            <p>
-              Compara dos archivos y genera un informe HTML con tres bloques:
-              <strong>Added</strong>, <strong>Removed</strong> y
-              <strong>Changed</strong>. Perfecto para revisar contratos o
-              configuraciones.
-            </p>
-            <pre class="playground-code"><code># Instala desde PyPI
-pip install json-pretty-diff
-
-# Ejecuta el diff
-jpd original.json updated.json -o diff.html
-
-# Abre el informe en tu navegador
-open diff.html</code></pre>
-          </div>
-
-          <div class="playground-card">
-            <h3>Próximas demos web / Android</h3>
-            <p class="empty-state">
-              Aquí vivirán los experimentos interactivos cuando toque mostrar mis
-              proyectos de JavaScript, web y Android.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section id="contact">
         <h2 class="section-title">Contacto</h2>
@@ -337,7 +192,7 @@ open diff.html</code></pre>
         <div class="contact-box">
           <span class="contact-label">Escríbeme:</span>
           <div class="contact-links">
-            <a class="contact-pill" href="mailto:javier@restfulchecker.dev">✉️ javier@restfulchecker.dev</a>
+            <a class="contact-pill" href="mailto:jlianesglr@gmail.com">✉️ jlianesglr@gmail.com</a>
             <a class="contact-pill" href="https://www.linkedin.com/in/jlianes/" target="_blank" rel="noreferrer">💼 LinkedIn</a>
             <a class="contact-pill" href="https://github.com/JaviLianes8" target="_blank" rel="noreferrer">🐙 GitHub</a>
           </div>
