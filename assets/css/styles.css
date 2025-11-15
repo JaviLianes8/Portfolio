@@ -538,6 +538,8 @@ nav a:hover::after {
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 16px;
+  justify-items: center;
+  text-align: center;
 }
 
 .contact-label {
@@ -549,6 +551,7 @@ nav a:hover::after {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .contact-pill {
