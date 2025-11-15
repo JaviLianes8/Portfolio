@@ -17,6 +17,14 @@ export const PROJECTS = [
         translations: { es: "📱 Google Play", en: "📱 Google Play" },
       },
     ],
+    footerLinks: [
+      {
+        translations: {
+          es: "⭐️ 4,5 ★ en Google Play",
+          en: "⭐️ 4.5 ★ on Google Play",
+        },
+      },
+    ],
     translations: {
       es: {
         type: "Android · Kotlin",
@@ -48,7 +56,7 @@ export const PROJECTS = [
     ],
     footerLinks: [
       {
-        translations: { es: "⭐️ 5 ★ en Google Play", en: "⭐️ 5 ★ on Google Play" },
+        translations: { es: "⭐️ 4,5 ★ en Google Play", en: "⭐️ 4.5 ★ on Google Play" },
       },
     ],
     translations: {
@@ -205,12 +213,53 @@ export const PROJECTS = [
     },
   },
   {
+    id: "taxi-auto",
+    category: "web",
+    tags: [
+      "Google Maps",
+      "GraphHopper",
+      "Vercel",
+      "Next.js",
+      "CI/CD",
+      "Pricing Engine",
+      "Optimización",
+    ],
+    links: [
+      {
+        href: "https://taxi-auto-web.vercel.app/",
+        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
+      },
+    ],
+    footerLinks: [
+      {
+        translations: {
+          es: "Backend privado desplegado en mini PC",
+          en: "Private backend deployed on a mini PC",
+        },
+      },
+    ],
+    translations: {
+      es: {
+        type: "Web · Geolocalización",
+        title: "Taxi Auto",
+        description:
+          "Calculadora de tarifas de taxi en Madrid combinando Google Maps y rutas offline con GraphHopper. Flujo responsive centrado en el coste estimado.",
+      },
+      en: {
+        type: "Web · Geolocation",
+        title: "Taxi Auto",
+        description:
+          "Taxi fare calculator for Madrid combining Google Maps with offline routing via GraphHopper. Responsive flow focused on cost and route visualization.",
+      },
+    },
+  },
+  {
     id: "wedding-seating",
     category: "web",
     tags: ["Next.js", "Vercel", "Serverless"],
     links: [
       {
-        href: "https://vercel.com/javier-lianes-garcias-projects/autorganizador-mesas-boda",
+        href: "https://autorganizador-mesas-boda.vercel.app/",
         translations: { es: "🌐 Vista previa", en: "🌐 Preview" },
       },
     ],
