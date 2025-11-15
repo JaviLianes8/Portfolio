@@ -89,7 +89,7 @@ export const PROJECTS = [
       },
       {
         href: "https://restful-checker-website.vercel.app/",
-        translations: { es: "🌐 Web demo", en: "🌐 Demo site" },
+        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
       },
     ],
     footerLinks: [
@@ -100,13 +100,13 @@ export const PROJECTS = [
     ],
     translations: {
       es: {
-        type: "CLI · API Quality",
+        type: "CLI · API Quality · Python",
         title: "RESTful Checker",
         description:
           "Analiza especificaciones OpenAPI/Swagger para detectar problemas reales en APIs REST. Funciona en pipelines CI/CD o como verificación manual antes de publicar.",
       },
       en: {
-        type: "CLI · API Quality",
+        type: "CLI · API Quality · Python",
         title: "RESTful Checker",
         description:
           "Scans OpenAPI/Swagger specs to spot real issues in REST APIs. Ready for CI/CD pipelines or as a manual gate before releases.",
@@ -133,13 +133,13 @@ export const PROJECTS = [
     ],
     translations: {
       es: {
-        type: "CLI · Data Diff",
+        type: "CLI · Data Diff · Python",
         title: "json-pretty-diff",
         description:
           "Genera un informe HTML elegante con las diferencias de alto nivel entre dos JSON. Ideal para contratos, migraciones o auditorías.",
       },
       en: {
-        type: "CLI · Data Diff",
+        type: "CLI · Data Diff · Python",
         title: "json-pretty-diff",
         description:
           "Produces an elegant HTML report with the high-level differences between two JSON documents. Perfect for contracts, migrations or audits.",
@@ -167,13 +167,13 @@ export const PROJECTS = [
     translations: {
       es: {
         type: "Web · Firebase · Azure",
-        title: "Real Tajo CF · Plataforma de datos",
+        title: "Real Tajo CF",
         description:
           "Ecosistema web para publicar resultados, clasificaciones y calendario del club. Frontend en Firebase y backend FastAPI desplegado en Azure con cargas JSON estructuradas.",
       },
       en: {
         type: "Web · Firebase · Azure",
-        title: "Real Tajo CF · Data platform",
+        title: "Real Tajo CF",
         description:
           "Web ecosystem for standings, fixtures and stats. Firebase frontend plus a FastAPI backend on Azure that ingests structured JSON payloads.",
       },
@@ -236,14 +236,6 @@ export const PROJECTS = [
       {
         href: "https://github.com/JaviLianes8/Taxi-Auto-Back",
         translations: { es: "🔒 Backend privado", en: "🔒 Private backend" },
-      },
-    ],
-    footerLinks: [
-      {
-        translations: {
-          es: "Backend privado desplegado en mini PC",
-          en: "Private backend deployed on a mini PC",
-        },
       },
     ],
     translations: {
