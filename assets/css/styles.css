@@ -693,6 +693,10 @@ nav a:hover::after {
 .contact-pill img,
 .link-pill img {
   display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .contact-pill:hover {
