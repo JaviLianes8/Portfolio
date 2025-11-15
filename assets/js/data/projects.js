@@ -17,6 +17,14 @@ export const PROJECTS = [
         translations: { es: "📱 Google Play", en: "📱 Google Play" },
       },
     ],
+    footerLinks: [
+      {
+        translations: {
+          es: "⭐️ 4,5 ★ en Google Play",
+          en: "⭐️ 4.5 ★ on Google Play",
+        },
+      },
+    ],
     translations: {
       es: {
         type: "Android · Kotlin",
@@ -81,7 +89,7 @@ export const PROJECTS = [
       },
       {
         href: "https://restful-checker-website.vercel.app/",
-        translations: { es: "🌐 Web demo", en: "🌐 Demo site" },
+        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
       },
     ],
     footerLinks: [
@@ -92,13 +100,13 @@ export const PROJECTS = [
     ],
     translations: {
       es: {
-        type: "CLI · API Quality",
+        type: "CLI · API Quality · Python",
         title: "RESTful Checker",
         description:
           "Analiza especificaciones OpenAPI/Swagger para detectar problemas reales en APIs REST. Funciona en pipelines CI/CD o como verificación manual antes de publicar.",
       },
       en: {
-        type: "CLI · API Quality",
+        type: "CLI · API Quality · Python",
         title: "RESTful Checker",
         description:
           "Scans OpenAPI/Swagger specs to spot real issues in REST APIs. Ready for CI/CD pipelines or as a manual gate before releases.",
@@ -125,13 +133,13 @@ export const PROJECTS = [
     ],
     translations: {
       es: {
-        type: "CLI · Data Diff",
+        type: "CLI · Data Diff · Python",
         title: "json-pretty-diff",
         description:
           "Genera un informe HTML elegante con las diferencias de alto nivel entre dos JSON. Ideal para contratos, migraciones o auditorías.",
       },
       en: {
-        type: "CLI · Data Diff",
+        type: "CLI · Data Diff · Python",
         title: "json-pretty-diff",
         description:
           "Produces an elegant HTML report with the high-level differences between two JSON documents. Perfect for contracts, migrations or audits.",
@@ -141,7 +149,14 @@ export const PROJECTS = [
   {
     id: "real-tajo",
     category: "web",
-    tags: ["FastAPI", "Firebase Hosting", "Azure", "DataOps", "Automatización"],
+    tags: [
+      "FastAPI",
+      "Firebase Hosting",
+      "Azure",
+      "DataOps",
+      "Automatización",
+      "Backend · Python",
+    ],
     links: [
       {
         href: "https://real-tajo-cf.web.app/",
@@ -159,13 +174,13 @@ export const PROJECTS = [
     translations: {
       es: {
         type: "Web · Firebase · Azure",
-        title: "Real Tajo CF · Plataforma de datos",
+        title: "Real Tajo CF",
         description:
           "Ecosistema web para publicar resultados, clasificaciones y calendario del club. Frontend en Firebase y backend FastAPI desplegado en Azure con cargas JSON estructuradas.",
       },
       en: {
         type: "Web · Firebase · Azure",
-        title: "Real Tajo CF · Data platform",
+        title: "Real Tajo CF",
         description:
           "Web ecosystem for standings, fixtures and stats. Firebase frontend plus a FastAPI backend on Azure that ingests structured JSON payloads.",
       },
@@ -174,7 +189,14 @@ export const PROJECTS = [
   {
     id: "minecraft-panel",
     category: "web",
-    tags: ["SSE", "Clean Architecture", "Vercel", "Realtime", "Infra Privada"],
+    tags: [
+      "SSE",
+      "Clean Architecture",
+      "Vercel",
+      "Realtime",
+      "Infra Privada",
+      "Backend · Python",
+    ],
     links: [
       {
         href: "https://lianes-minecraft-front.vercel.app/",
@@ -205,12 +227,54 @@ export const PROJECTS = [
     },
   },
   {
+    id: "taxi-auto",
+    category: "web",
+    tags: [
+      "Google Maps",
+      "GraphHopper",
+      "Vercel",
+      "Next.js",
+      "CI/CD",
+      "Pricing Engine",
+      "Optimización",
+      "Backend · Python",
+    ],
+    links: [
+      {
+        href: "https://taxi-auto-web.vercel.app/",
+        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
+      },
+      {
+        href: "https://github.com/JaviLianes8/Taxi-Auto-Web",
+        translations: { es: "🐙 Frontend privado", en: "🐙 Private frontend" },
+      },
+      {
+        href: "https://github.com/JaviLianes8/Taxi-Auto-Back",
+        translations: { es: "🔒 Backend privado", en: "🔒 Private backend" },
+      },
+    ],
+    translations: {
+      es: {
+        type: "Web · Geolocalización",
+        title: "Taxi Auto",
+        description:
+          "Calculadora de tarifas de taxi en Madrid combinando Google Maps y rutas offline con GraphHopper. Flujo responsive centrado en el coste estimado.",
+      },
+      en: {
+        type: "Web · Geolocation",
+        title: "Taxi Auto",
+        description:
+          "Taxi fare calculator for Madrid combining Google Maps with offline routing via GraphHopper. Responsive flow focused on cost and route visualization.",
+      },
+    },
+  },
+  {
     id: "wedding-seating",
     category: "web",
     tags: ["Next.js", "Vercel", "Serverless"],
     links: [
       {
-        href: "https://vercel.com/javier-lianes-garcias-projects/autorganizador-mesas-boda",
+        href: "https://autorganizador-mesas-boda.vercel.app/",
         translations: { es: "🌐 Vista previa", en: "🌐 Preview" },
       },
     ],
