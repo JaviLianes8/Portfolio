@@ -23,8 +23,8 @@ export const TRANSLATIONS = {
       description:
         "He combinado Kotlin, Jetpack y servicios Java con componentes en C/C++ en terminales Android que imprimen tickets y sincronizan datos con APIs seguras. También diseño CLIs y paneles web con Python y FastAPI, mantengo librerías en C/C++ para automatizar hardware de laboratorio y documento cada release con métricas accionables.",
       links: {
-        linkedin: "💼 LinkedIn",
-        github: "🐙 GitHub",
+        linkedin: " LinkedIn",
+        github: " GitHub",
       },
     },
     projects: {
@@ -65,8 +65,8 @@ export const TRANSLATIONS = {
       description:
         "I combine Kotlin, Jetpack and Java services with C/C++ components on Android terminals that print tickets and sync secure APIs. I also design CLIs and web panels with Python and FastAPI, maintain C/C++ libraries to automate lab hardware and document every release with actionable metrics.",
       links: {
-        linkedin: "💼 LinkedIn",
-        github: "🐙 GitHub",
+        linkedin: " LinkedIn",
+        github: " GitHub",
       },
     },
     projects: {
