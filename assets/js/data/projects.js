@@ -4,6 +4,35 @@
  */
 export const PROJECTS = [
   {
+    id: "confetii",
+    category: "android",
+    tags: ["Kotlin", "Firebase", "WorkManager", "Compose", "Room", "Notifications"],
+    links: [
+      {
+        href: "https://github.com/JaviLianes8/BirthdayNotifierApp",
+        translations: { es: "🐙 Código privado", en: "🐙 Private code" },
+      },
+      {
+        href: "https://play.google.com/store/apps/details?id=com.jlianes.birthdaynotifier",
+        translations: { es: "📱 Google Play", en: "📱 Google Play" },
+      },
+    ],
+    translations: {
+      es: {
+        type: "Android · Kotlin",
+        title: "Confetii – Birthday Notifier",
+        description:
+          "Recordatorios inteligentes con Google Sign-In y sincronización en Firebase Storage. WorkManager diario lanza notificaciones con mensajes prellenados.",
+      },
+      en: {
+        type: "Android · Kotlin",
+        title: "Confetii – Birthday Notifier",
+        description:
+          "Smart reminders with Google Sign-In and Firebase Storage sync. A daily WorkManager job sends notifications with pre-filled greetings.",
+      },
+    },
+  },
+  {
     id: "restful-checker",
     category: "python",
     tags: ["Python", "OpenAPI", "CLI", "CI/CD", "Quality Gates"],
@@ -63,9 +92,6 @@ export const PROJECTS = [
         href: "https://pepy.tech/projects/json-pretty-diff?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=line&versions=0.1.2",
         translations: { es: "📈 Descargas", en: "📈 Downloads" },
       },
-      {
-        translations: { es: "🧪 Integración en QA interna", en: "🧪 Used in internal QA" },
-      },
     ],
     translations: {
       es: {
@@ -98,11 +124,6 @@ export const PROJECTS = [
       {
         href: "https://github.com/JaviLianes8/RealTajoFCBack",
         translations: { es: "🐙 Backend", en: "🐙 Backend" },
-      },
-    ],
-    footerLinks: [
-      {
-        translations: { es: "ETL JSON ↔️ PDF automatizada", en: "Automated JSON ↔️ PDF ETL" },
       },
     ],
     translations: {
@@ -138,11 +159,6 @@ export const PROJECTS = [
         translations: { es: "🔒 Backend privado", en: "🔒 Private backend" },
       },
     ],
-    footerLinks: [
-      {
-        translations: { es: "Backend on-premise en mini PC", en: "On-premise backend on a mini PC" },
-      },
-    ],
     translations: {
       es: {
         type: "Web · Panel en tiempo real",
@@ -155,154 +171,6 @@ export const PROJECTS = [
         title: "Lianes Minecraft Control Panel",
         description:
           "Static dashboard for my Minecraft server mixing SSE, polling and salted passwords generated at build time.",
-      },
-    },
-  },
-  {
-    id: "confetii",
-    category: "android",
-    tags: ["Kotlin", "Firebase", "WorkManager", "Compose", "Room", "Notifications"],
-    links: [
-      {
-        href: "https://github.com/JaviLianes8/BirthdayNotifierApp",
-        translations: { es: "🐙 Código privado", en: "🐙 Private code" },
-      },
-      {
-        href: "https://play.google.com/store/apps/details?id=com.jlianes.birthdaynotifier",
-        translations: { es: "📱 Google Play", en: "📱 Google Play" },
-      },
-      {
-        translations: {
-          es: "🧠 Flujos automatizados por usuario",
-          en: "🧠 User-specific automated flows",
-        },
-      },
-    ],
-    footerLinks: [
-      {
-        translations: { es: "4.57 ★ en Google Play", en: "4.57 ★ on Google Play" },
-      },
-    ],
-    translations: {
-      es: {
-        type: "Android · Kotlin",
-        title: "Confetii – Birthday Notifier",
-        description:
-          "Recordatorios inteligentes con Google Sign-In y sincronización en Firebase Storage. WorkManager diario lanza notificaciones con mensajes prellenados.",
-      },
-      en: {
-        type: "Android · Kotlin",
-        title: "Confetii – Birthday Notifier",
-        description:
-          "Smart reminders with Google Sign-In and Firebase Storage sync. A daily WorkManager job sends notifications with pre-filled greetings.",
-      },
-    },
-  },
-  {
-    id: "finiq",
-    category: "android",
-    tags: ["Kotlin", "Clean Architecture", "MVVM", "Jetpack", "Room", "Offline First"],
-    links: [
-      {
-        href: "https://github.com/JaviLianes8/Finiq",
-        translations: { es: "🐙 Código privado", en: "🐙 Private code" },
-      },
-      {
-        href: "https://play.google.com/store/apps/details?id=com.jlianes.finiq.app",
-        translations: { es: "📱 Google Play", en: "📱 Google Play" },
-      },
-      {
-        translations: {
-          es: "📊 Simulador IRPF y convenios",
-          en: "📊 IRPF simulator and agreements",
-        },
-      },
-    ],
-    footerLinks: [
-      {
-        translations: { es: "5 ★ en Google Play", en: "5 ★ on Google Play" },
-      },
-    ],
-    translations: {
-      es: {
-        type: "Android · Kotlin",
-        title: "Finiq",
-        description:
-          "Calculadora laboral para España: sueldo neto, vacaciones e indemnizaciones. Arquitectura Clean preparada para convenios y consulta de vida laboral.",
-      },
-      en: {
-        type: "Android · Kotlin",
-        title: "Finiq",
-        description:
-          "Labor law calculator for Spain: net salary, pending vacation and severance. Clean architecture ready for agreements and social security pulls.",
-      },
-    },
-  },
-  {
-    id: "taxi-auto",
-    category: "web",
-    tags: ["Google Maps", "GraphHopper", "Vercel", "Next.js", "CI/CD", "Pricing Engine", "Optimización"],
-    links: [
-      {
-        href: "https://taxi-auto-web.vercel.app/",
-        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
-      },
-    ],
-    footerLinks: [
-      {
-        translations: {
-          es: "Backend privado desplegado en mini PC",
-          en: "Private backend deployed on a mini PC",
-        },
-      },
-    ],
-    translations: {
-      es: {
-        type: "Web · Geolocalización",
-        title: "Taxi Auto",
-        description:
-          "Calculadora de tarifas de taxi en Madrid combinando Google Maps y rutas offline con GraphHopper. Flujo responsive centrado en el coste estimado.",
-      },
-      en: {
-        type: "Web · Geolocation",
-        title: "Taxi Auto",
-        description:
-          "Taxi fare calculator for Madrid combining Google Maps with offline routing via GraphHopper. Responsive flow focused on cost and route visualization.",
-      },
-    },
-  },
-  {
-    id: "wedding-seating",
-    category: "web",
-    status: {
-      translations: { es: "🚧 En progreso", en: "🚧 In progress" },
-    },
-    tags: [
-      "Next.js",
-      "Vercel",
-      "Tailwind CSS",
-      "Server Actions",
-      "Planificación",
-      "Realtime Sync",
-    ],
-    links: [
-      {
-        href: "https://autorganizador-mesas-boda.vercel.app/",
-        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
-      },
-    ],
-    translations: {
-      es: {
-        type: "Web · Monolito Serverless",
-        title: "Organizador de mesas para boda",
-        description:
-          "Herramienta monolítica para planificar mesas y aforos en eventos. Despliegue en Vercel para iterar rápido mientras cierro la lógica de asignación automática.",
-      },
-      en: {
-        type: "Web · Serverless monolith",
-        title: "Wedding seating planner",
-        description:
-          "Serverless tool to plan tables and capacity for events. Deployed on Vercel to iterate fast while finishing auto-assignment and layout export.",
       },
     },
   },
