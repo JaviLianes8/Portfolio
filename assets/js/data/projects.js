@@ -33,6 +33,40 @@ export const PROJECTS = [
     },
   },
   {
+    id: "finiq",
+    category: "android",
+    tags: ["Kotlin", "Clean Architecture", "MVVM"],
+    links: [
+      {
+        href: "https://github.com/JaviLianes8/Finiq",
+        translations: { es: "🐙 Código privado", en: "🐙 Private code" },
+      },
+      {
+        href: "https://play.google.com/store/apps/details?id=com.jlianes.finiq.app",
+        translations: { es: "📱 Google Play", en: "📱 Google Play" },
+      },
+    ],
+    footerLinks: [
+      {
+        translations: { es: "⭐️ 5 ★ en Google Play", en: "⭐️ 5 ★ on Google Play" },
+      },
+    ],
+    translations: {
+      es: {
+        type: "Android · Kotlin",
+        title: "Finiq",
+        description:
+          "Calculadora laboral para España: sueldo neto, vacaciones pendientes e indemnizaciones. Arquitectura Clean lista para ampliar con convenios y consulta de vida laboral.",
+      },
+      en: {
+        type: "Android · Kotlin",
+        title: "Finiq",
+        description:
+          "Labor calculator for Spain: net salary, pending vacations and severance estimations. Clean Architecture foundation ready to add agreements and social security lookups.",
+      },
+    },
+  },
+  {
     id: "restful-checker",
     category: "python",
     tags: ["Python", "OpenAPI", "CLI", "CI/CD", "Quality Gates"],
@@ -51,10 +85,6 @@ export const PROJECTS = [
       },
     ],
     footerLinks: [
-      {
-        href: "https://vercel.com/javier-lianes-garcias-projects/restful-checker-landing",
-        translations: { es: "🚀 Landing en Vercel", en: "🚀 Landing on Vercel" },
-      },
       {
         href: "https://pepy.tech/projects/restful-checker?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=line&versions=2.0.0",
         translations: { es: "📈 Descargas", en: "📈 Downloads" },
@@ -171,6 +201,34 @@ export const PROJECTS = [
         title: "Lianes Minecraft Control Panel",
         description:
           "Static dashboard for my Minecraft server mixing SSE, polling and salted passwords generated at build time.",
+      },
+    },
+  },
+  {
+    id: "wedding-seating",
+    category: "web",
+    tags: ["Next.js", "Vercel", "Serverless"],
+    links: [
+      {
+        href: "https://vercel.com/javier-lianes-garcias-projects/autorganizador-mesas-boda",
+        translations: { es: "🌐 Vista previa", en: "🌐 Preview" },
+      },
+    ],
+    status: {
+      translations: { es: "🚧 En progreso", en: "🚧 In progress" },
+    },
+    translations: {
+      es: {
+        type: "Web · Monolito Serverless",
+        title: "Organizador de mesas para boda",
+        description:
+          "Herramienta monolítica para planificar mesas y aforos en eventos. Despliego en Vercel para iterar la UX mientras cierro la asignación automática y la exportación de planos.",
+      },
+      en: {
+        type: "Web · Serverless Monolith",
+        title: "Wedding seating planner",
+        description:
+          "Monolithic tool to plan tables and guest capacity for events. Hosted on Vercel to iterate quickly on UX while I finish the automatic seating logic and layout exports.",
       },
     },
   },
