@@ -275,12 +275,13 @@ export const PROJECTS = [
     links: [
       {
         href: "https://autorganizador-mesas-boda.vercel.app/",
-        translations: { es: "🌐 Vista previa", en: "🌐 Preview" },
+        translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
+      },
+      {
+        href: "https://github.com/JaviLianes8/Autorganizador-mesas-boda",
+        translations: { es: "🔒 Código privado", en: "🔒 Private code" },
       },
     ],
-    status: {
-      translations: { es: "🚧 En progreso", en: "🚧 In progress" },
-    },
     translations: {
       es: {
         type: "Web · Monolito Serverless",
