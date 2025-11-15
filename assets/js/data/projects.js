@@ -56,7 +56,7 @@ export const PROJECTS = [
     ],
     footerLinks: [
       {
-        translations: { es: "⭐️ 4,5 ★ en Google Play", en: "⭐️ 4.5 ★ on Google Play" },
+        translations: { es: "⭐️ 5 ★ en Google Play", en: "⭐️ 5 ★ on Google Play" },
       },
     ],
     translations: {
@@ -228,6 +228,14 @@ export const PROJECTS = [
       {
         href: "https://taxi-auto-web.vercel.app/",
         translations: { es: "🌐 Sitio en vivo", en: "🌐 Live site" },
+      },
+      {
+        href: "https://github.com/JaviLianes8/Taxi-Auto-Web",
+        translations: { es: "🐙 Frontend privado", en: "🐙 Private frontend" },
+      },
+      {
+        href: "https://github.com/JaviLianes8/Taxi-Auto-Back",
+        translations: { es: "🔒 Backend privado", en: "🔒 Private backend" },
       },
     ],
     footerLinks: [
