@@ -24,7 +24,7 @@ export const renderHeader = (copy, currentLang) => {
 
   return `
     <header>
-      <div class="logo">Javier Lianes · Indie Dev</div>
+      <div class="logo">Javier Lianes · SW Dev</div>
       <nav>
         <a href="#about">${nav.about}</a>
         <a href="#projects">${nav.projects}</a>
